@@ -34,9 +34,9 @@ include files in an `include` folder, and do a `make menuconfig` before
 building with `make`.
 
 For the Linux test, if `/tmp` is on tmpfs, i.e. a RAM disk, it will be used.
-Otherwise the experiment will use `sudo` to create a RAM disk. It is important
-to use a RAM disk to be fair as the Unikraft experiments are using the RAM disk
-approach, and the benchmark is I/O intensive. Note that on some Linux boxes,
-using `/tmp` on tmpfs is actually faster than using a dedicated RAM disk
-mounted using tmpfs as well (sync operations return immediately with `/tmp`
-while provoking context switches with other RAM disks).
+Otherwise the experiment will create a RAM disk. It is important to use a RAM
+disk to be fair as the Unikraft experiments are using the RAM disk approach,
+and the benchmark is I/O intensive. Note that on some Linux boxes, using `/tmp`
+on tmpfs is actually faster than using a dedicated RAM disk mounted using tmpfs
+as well (sync operations return immediately with `/tmp` while provoking context
+switches with other RAM disks).
